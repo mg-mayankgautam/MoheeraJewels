@@ -10,10 +10,7 @@ const About = () => {
 
             <div className='homeAboutContent'>
                 <div className='font-heading aboutText'>
-                    <span>Lorem ipsum dolor</span>
-                    <span> sit amet, </span>
-                    <span>consectetuer </span>
-                    <span>adipiscing elit, sed</span>
+                    Lorem ipsum dolor <br/> sit amet, <br/>consectetuer <br/>adipiscing elit, sed
                 </div>
 
                 <Link to='/ourstory'>

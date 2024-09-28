@@ -1,7 +1,18 @@
 .ProductDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    padding: 72px 72px 0px;
+    min-height: calc(100vh);
+    max-height: calc(100vh);
+    margin: 40px 0;
+    /* position: relative; */
+}
+
+.productCarousel{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 64px;
     gap: 32px;
 }
 

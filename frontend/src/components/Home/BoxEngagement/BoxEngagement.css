@@ -27,10 +27,10 @@
 
 .homeCEGContent {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: flex-start;
     align-items: center;
-    gap: 72px;
+    /* gap: 72px; */
     text-align: right;
 }
 
@@ -39,10 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-.CEGText>span{
     font-size: 72px;
-    background-color: var(--light);
     color: white;
     line-height: 60px;
 }
@@ -51,7 +48,7 @@
 .iconCEG{
     position: absolute;
     top: calc(50% - 32px);
-    left: calc(50% - 64px);
+    left: calc(50% - 68px);
 }
 .iconCEG>img{
     width: 150px;

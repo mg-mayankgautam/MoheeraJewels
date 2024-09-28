@@ -13,18 +13,17 @@ const BoxEngagement = () => {
             </div>
 
             <div className='homeCEGContent'>
-                <div className='font-heading CEGText'>
-                    <span>Begin your own</span>
-                    <span> custom design jour</span>
-                    <span>-ney today by using</span>
-                    {/* <span>adipiscing elit, sed</span> */}
-                </div>
+                <div className='flex flex-col gap-[72px] pl-6 items-center'>
+                    <div className='font-heading CEGText'>
+                        Begin your own <br />custom design journey <br />today by using
+                    </div>
 
-                <Link to='/customengagementrings'>
-                    <button className=''>
-                        <span>Custom Engagement Rings</span>
-                    </button>
-                </Link>
+                    <Link to='/customengagementrings'>
+                        <button className=''>
+                            <span>Custom Engagement Rings</span>
+                        </button>
+                    </Link>
+                </div>
             </div>
 
             <div className='iconCEG'>

@@ -6,22 +6,31 @@ import p3 from '../../../assets/product3.png'
 import p4 from '../../../assets/product4.png'
 
 const ProductDisplay = () => {
-  return (
-    <div className='ProductDisplay'>
-        <div className='productDisplay_ImgDiv'>
-            <img src={p1}/>
+    return (
+        <div className='ProductDisplay'>
+            <div className='flex gap-8'>
+                <button>shop all products</button>
+                <button className='bg-white'>shop rings</button>
+                <button className='bg-white'>shop necklaces</button>
+                <button className='bg-white'>shop earrings</button>
+            </div>
+
+            <div className='productCarousel'>
+                <div className='productDisplay_ImgDiv'>
+                    <img src={p1} />
+                </div>
+                <div className='productDisplay_ImgDiv'>
+                    <img src={p2} />
+                </div>
+                <div className='productDisplay_ImgDiv'>
+                    <img src={p3} />
+                </div>
+                <div className='productDisplay_ImgDiv'>
+                    <img src={p4} />
+                </div>
+            </div>
         </div>
-        <div className='productDisplay_ImgDiv'>
-            <img src={p2}/>
-        </div>
-        <div className='productDisplay_ImgDiv'>
-            <img src={p3}/>
-        </div>
-        <div className='productDisplay_ImgDiv'>
-            <img src={p4}/>
-        </div>
-    </div>
-  )
+    )
 }
 
 export default ProductDisplay

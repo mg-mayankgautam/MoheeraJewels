@@ -14,9 +14,6 @@ button{
   display: flex;
   align-items: center;
   background-color: var(--primary);
-}
-button>*{
-  background-color: var(--light);
   color: var(--black);
   font-size: 12px;
   line-height: 14px;
