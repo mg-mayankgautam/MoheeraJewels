@@ -1,0 +1,10 @@
+.ProductDisplay{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 64px;
+    gap: 32px;
+}
+
+.productDisplay_ImgDiv>img{
+    height: 100%;
+}

@@ -1,0 +1,41 @@
+.CartSlider{
+    /* position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    background-color: #00000059;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end; */
+}
+
+.Cart{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    gap: 32px;
+    padding: 32px 64px;
+    min-height: calc(100vh - 69px);
+    /* background-color: white; */
+    /* width: 300px; */
+    text-align: left;
+}
+
+.closeCartBtn{
+    text-align: right;
+}
+
+.PlaceOrderBtns{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+    background-color: white; 
+    padding: 32px;
+    box-shadow: 0px 5px 10px 0px #0000001A;
+    padding-top: 16px;
+    position: sticky;
+    top: 32px;
+    align-self: flex-start;
+}

@@ -1,0 +1,57 @@
+.About2{
+    /* flex gap-8 p-16 h-[90vh] */
+    display: flex;
+    gap: 5%;
+    padding: 80px;
+    padding-left: 64px;
+    min-height: 100vh;
+    margin-top: 80px;
+}
+
+.HomeAboutImgContainer2{
+    /* w-[50%] flex-grow relative */
+    position: relative;
+    flex-grow: 1;
+    width: 45%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.HomeAbout_BgImgDiv2{
+    /* absolute top-0 bottom-0 left-0 right-[20%] */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.HomeAbout_BgImgDiv2>img{
+    /* object-cover object-center max-h-[100%] */
+    object-fit: contain;
+    object-position: center;
+    width: 80%;
+    height: 80%;
+    max-height: 100%;
+}
+
+.HomeAbout_FrontImgDiv2{
+    z-index: 1;
+}
+.HomeAbout_FrontImgDiv2>img{
+    height: 360px;
+}
+
+.HomeAboutContent2{
+    /* w-[50%] align-self-center flex flex-col gap-8 */
+    width: 55%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: left;
+}

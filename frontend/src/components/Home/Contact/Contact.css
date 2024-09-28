@@ -1,0 +1,27 @@
+.Contact{
+    padding: 80px;
+    min-height: 100vh;
+    display: flex;
+}
+
+.ContactBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+}
+
+.contactContent{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 64px;
+    gap: 32px;
+}
+
+.contactImgDiv>img{
+    object-fit: cover;
+    height: 100%;
+    /* width: 100%; */
+}

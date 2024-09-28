@@ -1,0 +1,58 @@
+.CEG {
+    display: grid;
+    grid-template-columns: 105fr 90fr;
+    gap: 32px;
+    padding: 72px 72px 0px;
+    min-height: calc(100vh);
+    max-height: calc(100%);
+    margin: 40px 0;
+    position: relative;
+}
+
+.HomeCEGImgDiv {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 100%;
+    max-height: calc(100% - 40px);
+}
+
+.HomeCEGImgDiv>img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.homeCEGContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    text-align: right;
+}
+
+.CEGText{
+    /* text-[60px] bg-[var(--primary)] text-white line-height- */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.CEGText>span{
+    font-size: 72px;
+    background-color: var(--light);
+    color: white;
+    line-height: 60px;
+}
+
+
+.iconCEG{
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 64px);
+}
+.iconCEG>img{
+    width: 150px;
+}

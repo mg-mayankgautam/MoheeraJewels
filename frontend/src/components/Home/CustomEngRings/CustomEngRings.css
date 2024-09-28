@@ -1,0 +1,97 @@
+.CustomEngRings {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 0 24px 64px;
+    align-items: center;
+}
+
+.CER_Header {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.CER_imgDiv {
+    max-height: 100%;
+}
+
+.CER_imgDiv>img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.CER_HeaderText {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 32px;
+    align-items: center;
+}
+
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'body';
+    margin-top: 28px;
+}
+
+
+.formWrap {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.formWrap>.formRow {
+    width: calc(50% - 20px);
+}
+
+
+.formRow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.formRow label {
+    /* margin-bottom: 5px; */
+    font-weight: 600;
+}
+
+.formRow input {
+    padding: 4px 8px;
+    /* border-radius: 0.25rem; */
+    border: 1px solid #dce7f1;
+    width: calc(100% - 20px);
+    font-size: 12px !important;
+    color: #607080;
+}
+
+.formRow textarea {
+    padding: 4px 8px;
+    /* border-radius: 0.25rem; */
+    border: 1px solid #dce7f1;
+    max-width: calc(100% - 20px);
+    font-size: 12px !important;
+    color: #607080;
+}
+
+.formRow select {
+    padding: 4px 8px;
+    /* border-radius: 0.25rem; */
+    border: 1px solid #dce7f1;
+    width: calc(100% - 20px);
+    font-size: 12px !important;
+    color: #607080;
+}

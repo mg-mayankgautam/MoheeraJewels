@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
+
+@layer base {
+  @font-face {
+    font-family: 'body';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonnts.com-Trade_Gothic_Next_LT_Pro_BdCn.ttf) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'heading';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./assets/fonnts.com-Vincente-Semi-Bold.otf) format('woff2');
+  }
+}
+
+:root{
+  /* --primary : #7C2447; */
+  /* --primary : #CC929B; */
+  --primary : #CB919A;
+  --secondary: #7C2447;
+  --light : #FACBCC;
+  --black: #1A1816;
+}
+
