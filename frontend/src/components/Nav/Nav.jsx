@@ -7,11 +7,13 @@ import cart from '../../assets/icons/cart.svg'
 import heart from '../../assets/icons/heart.svg'
 import { Link } from 'react-router-dom'
 import { useShoppingCart } from '../../context/ShoppingCartContext'
+import './Nav.css'
 
 
 const Nav = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [navItemExpand, setNavItemExpand] = useState(false);
 
   return (
     <>
@@ -36,22 +38,84 @@ const Nav = () => {
         </div>
 
 
-        <div className={isNavOpen ? 'bg-[var(--black)] absolute top-[80px] left-0 right-0 py-6 px-16 flex flex-col items-start z-3 navAnim active custom-shadow font-body' : 'bg-[var(--black)] absolute top-[80px] left-0 right-0 py-0 px-16 flex flex-col items-start z-1 navAnim font-body'}>
-          <div>
-            <Link to='/ourstory'>OUR STORY</Link>
-          </div>
+
+
+        <div className={isNavOpen ? 'NavMenu navAnim active' : 'NavMenu navAnim'}>
 
           <div>
-            <Link to='/customengagementrings'>CUSTOM ENGAGEMENT RINGS</Link>
+            <div className='navHead'>SHOP</div>
+
+            <div className='navItem'>
+              <Link to='/collection'>SHOP BY CATEOGRY</Link>
+            </div>
+            <div className={navItemExpand ? 'navItem selected' : 'navItem'} onClick={() => setNavItemExpand(!navItemExpand)}>
+              SHOP BY COLLECTION
+            </div>
+
+            <div className={navItemExpand ? 'navAnim active navItemExpand' : 'navAnim navItemExpand'}>
+              <div className='navItem'>
+                <Link to='/collection'>on the move</Link>
+              </div>
+              <div className='navItem'>
+                <Link to='/collection'>essentials</Link>
+              </div>
+            </div>
+
+            <div className='navItem'>
+              <Link to='/collection'>NEW ARRIVALS</Link>
+            </div>
           </div>
 
-          <div>
-            <Link to='/collection'>COLLECTION</Link>
-          </div>
+
 
           <div>
-            <Link to='/bespokeprocess'>BESPOKE PROCESS</Link>
+            <div className='navHead'>DISCOVER</div>
+
+            <div className='navItem'>
+              <Link to='/ourstory'>about us</Link>
+            </div>
+            <div className='navItem'>
+              <Link to='/bespokeprocess'>Bespoke Process</Link>
+            </div>
+            <div className='navItem'>
+              <Link to='/'>Love letters</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Book an Appointment</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Contact</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Connect on Instagram</Link>
+            </div>
+
           </div>
+
+
+
+
+          <div>
+            <div className='navHead'>Care</div>
+
+            <div className='navItem'>
+              <Link to=''>FAQs</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Size Guide</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Lab Diamond Guidance</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Privacy POlicy</Link>
+            </div>
+            <div className='navItem'>
+              <Link to=''>Terms and Conditions</Link>
+            </div>
+
+          </div>
+
         </div>
 
       </div>

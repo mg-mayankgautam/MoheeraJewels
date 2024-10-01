@@ -1,0 +1,63 @@
+/* bg-[var(--black)] absolute top-[80px] left-0 right-0 py-6 px-16 flex flex-col items-start z-3 navAnim active custom-shadow font-body */
+
+.NavMenu {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-items: start;
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 72px;
+    right: 72px;
+    padding: 48px 72px;
+    z-index: 3;
+    color: var(--secondary);
+    background-color: white;
+    font-family: 'body';
+    box-shadow: 0px 5px 10px 0px #0000001A;
+}
+
+.navAnim {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.navAnim.active {
+    opacity: 1;
+    height: auto;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.navItemExpand{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navHead {
+    font-family: 'heading';
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.navItem {
+    border-bottom: 2px solid transparent;
+    transition: all 200ms ease-in-out;
+    margin: 4px 0;
+    text-transform: uppercase;
+    width: fit-content;
+    cursor: pointer;
+    /* font-size: 14px; */
+}
+
+.navItem:hover {
+    color: var(--primary);
+    /* border-bottom: 2px solid var(--primary); */
+}
+.navItem.selected {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}

@@ -22,16 +22,3 @@ button{
   text-transform: uppercase;
   font-weight: 700;
 }
-
-.navAnim{
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 300ms ease-in-out;
-}
-.navAnim.active{
-  opacity: 1;
-  height: auto;
-  max-height: 144px;
-  overflow: hidden;
-}
