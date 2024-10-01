@@ -1,3 +1,64 @@
 .Footer{
-    
+    background-color: var(--primary);
+    color: white;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 16px;
+    text-align: left;
+}
+
+.footerLogo{
+    height: 60px
+}
+.footerLogo>img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.footerWatermark{
+    display: flex;
+    justify-content: center;
+    max-width: 140px;
+    margin-top: 50px;
+}
+.footerWatermark>img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.footerMenu{
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    justify-items: center;
+}
+
+.footerHead{
+    font-family: 'heading';
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.footerline{
+    background-color: var(--secondary);
+    width: 100%;
+    height: 40%;
+    margin: auto 0;
+}
+
+.footerItem{
+    color: var(--secondary);
+    border-bottom: 2px solid transparent;
+    transition: all 200ms ease-in-out;
+    margin: 4px 0;
+    text-transform: uppercase;
+    width: fit-content;
+    /* font-size: 14px; */
+}
+.footerItem:hover{
+    color: white;
+    border-bottom: 2px solid var(--secondary);
 }

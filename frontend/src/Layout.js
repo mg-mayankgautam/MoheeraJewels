@@ -84,7 +84,7 @@ const Layout = () => {
         : null
       }
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
 
   )

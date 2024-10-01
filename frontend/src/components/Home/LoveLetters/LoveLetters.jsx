@@ -29,7 +29,7 @@ const LoveLetters = () => {
                     <div className='text-[72px] mb-[-72px] flex items-end'>"</div>
                 </div>
 
-                <div className='self-end pr-8 font-body1 text-white underline'>JANE DOE</div>
+                <div className='self-end pr-8 font-bodyone text-white underline'>JANE DOE</div>
             </div>
         </div>
     )
