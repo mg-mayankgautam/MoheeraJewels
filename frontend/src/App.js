@@ -9,6 +9,9 @@ import OurStory from './components/OurStory/OurStory';
 import Bespoke from './components/Home/Bespoke/Bespoke';
 import CustomEngRings from './components/Home/CustomEngRings/CustomEngRings';
 import Cart from './components/Cart/Cart';
+import AdminLogin from './AdminPages/AdminLogin';
+import RequireAuth from './components/RequireAuth';
+import AdmindashBoard from './AdminPages/AdmindashBoard';
 
 function App() {
 
@@ -20,8 +23,7 @@ function App() {
 
         <Route path="/" element={<Layout />}>
 
-          <Route
-            index element={<Home />} />
+          <Route index element={<Home />} />
 
           <Route path="ourstory" element={<OurStory />} />
           <Route path="collection" element={<Collection />} />
@@ -31,7 +33,12 @@ function App() {
 
           {/* <Route path="search/:value" element={<SearchPage searchValue={searchValue} setSearchValue={setSearchValue} />}/> */}
 
+          <Route path="admin" element={<AdminLogin />} />
 
+          <Route element={<RequireAuth />}>
+            <Route path="admindashboard" element={<AdmindashBoard />} />
+
+          </Route>
 
         </Route>
 
