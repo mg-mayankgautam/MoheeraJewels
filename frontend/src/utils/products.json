@@ -1,34 +1,42 @@
 [
     {
         "id": 1,
-        "name": "Earring",
-        "category": "Ear",
+        "name": "Product ONE",
+        "modelno": "MW R006",
+        "category": "All",
         "description": "",
-        "price": 5.99,
-        "image": "product1.png"
+        "price": 20000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
     },
     {
         "id": 2,
-        "name": "Anklet",
-        "category": "Feet",
+        "name": "Product TWO",
+        "modelno": "MW R006",
+        "category": "All",
         "description": "",
-        "price": 3.99,
-        "image": "product2.png"
+        "price": 25000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
     },
     {
         "id": 3,
-        "name": "Bracelet",
-        "category": "Hand",
+        "name": "Product THREE",
+        "modelno": "MW R006",
+        "category": "All",
         "description": "",
-        "price": 12.99,
-        "image": "product3.png"
+        "price": 22000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
     },
     {
         "id": 4,
-        "name": "Necklace",
-        "category": "Neck",
+        "name": "Product FOUR",
+        "modelno": "MW R006",
+        "category": "All",
         "description": "",
-        "price": 10.99,
-        "image": "product4.png"
+        "price": 15000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
     }
 ]

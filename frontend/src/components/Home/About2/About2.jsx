@@ -1,6 +1,6 @@
 import React from 'react'
-import imgBg from '../../../assets/about2Bg.png'
-import imgFront from '../../../assets/page1main.png'
+// import imgBg from '../../../assets/about2Bg.png'
+// import imgFront from '../../../assets/page1main.png'
 import './About2.css'
 
 
@@ -9,10 +9,10 @@ const About2 = () => {
         <div className='About2'>
             <div className='HomeAboutImgContainer2'>
                 <div className='HomeAbout_BgImgDiv2'>
-                    <img src={imgBg} />
+                    {/* <img src={imgBg} /> */}
                 </div>
                 <div className='HomeAbout_FrontImgDiv2'>
-                    <img src={imgFront} />
+                    {/* <img src={imgFront} /> */}
                 </div>
             </div>
 

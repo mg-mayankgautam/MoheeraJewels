@@ -31,19 +31,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 48px;
     text-align: left;
 }
 
 .LLText{
-    /* text-[60px] bg-[var(--primary)] text-white line-height- */
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 72px;
+    font-size: 48px;
     color: white;
     align-self: flex-end;
-    line-height: 60px;
+    line-height: 48px;
+    max-width: 440px;
 }
 
 .iconLL{

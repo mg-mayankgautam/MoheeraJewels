@@ -1,9 +1,7 @@
 import React from 'react'
-import mainImg from '../../assets/page1main.png'
-import subImg from '../../assets/page1sub.png'
 import watermark from '../../assets/watermark.png'
-import video from '../../assets/home.mp4'
-import video2 from '../../assets/home2.mp4'
+import video from '../../assets/videos/home.mp4'
+import video2 from '../../assets/videos/home2.mp4'
 
 const Main = () => {
 

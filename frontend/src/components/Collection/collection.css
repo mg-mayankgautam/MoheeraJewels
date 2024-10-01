@@ -1,0 +1,85 @@
+.Collection{
+    padding: 72px 72px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.custom-shadow {
+    box-shadow: 0px 5px 10px 0px #0000001A;
+}
+
+.custom-bg {
+    background-color: rgba(24, 0, 10, 0.664);
+}
+
+.productCarousel{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.ProductDiv {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: var(--black);
+    padding: 12px 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.PD_imgDiv {
+    height: 150px;
+    align-self: center;
+}
+
+.PD_imgDiv>img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.PD_carat {
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.PD_carat:hover {
+    border-bottom: 1px solid var(--secondary);
+    ;
+    color: var(--secondary);
+}
+
+.PD_desc {
+    padding: 12px 16px;
+    color: white;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.PD_actions {
+    padding: 12px 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.PD_actionBtn {
+    border-radius: 0;
+    width: 100%;
+    font-size: 14px;
+    background-color: white;
+    color: var(--secondary);
+    justify-content: center;
+    height: 30px;
+}
+
+.PD_actionBtn:hover {
+    background-color: var(--primary);
+    color: white;
+}

@@ -1,5 +1,5 @@
-import React from 'react'
-import './MenuItem.css'
+import React, { useState } from 'react'
+import './collection.css'
 import { useShoppingCart } from '../../context/ShoppingCartContext';
 
 const Product = ({ item }) => {
@@ -7,72 +7,90 @@ const Product = ({ item }) => {
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
 
     const quantity = getItemQuantity(item.id);
-    // const quantity = 0;
 
+    const [hover, setHover] = useState(false);
 
     return (
 
-        <div className='w-[300px] h-[200px] relative my-8'>
-            <div className='h-[200px] w-[300px] custom-shadow'>
-                <img src={require(`../../assets/${item.image}`)} alt="" className='object-cover object-center w-[100%] h-[100%]' />
+        <div className='min-h-[320px]'
+        onMouseEnter={e => setHover(true)}
+        onMouseLeave={e => setHover(false)}
+        >
+
+            <div className='ProductDiv'>
+                <div className='text-[11px]'>
+                    {item.modelno}
+                </div>
+
+                <div className='PD_imgDiv'>
+                    <img src={require(`../../assets/${item.image}`)} />
+                </div>
+
+                <div className='flex justify-between text-[14px] mt-4'>
+                    <div>{item.name}</div>
+                    <div className='flex justify-end gap-4'>
+                        {item.carat.map(e =>
+                            <div className='PD_carat'>{e}</div>
+                        )}
+                    </div>
+                </div>
+
             </div>
 
-            <div className='flex flex-col items-center justify-center gap-1 p-2 pt-4 absolute top-0 left-0 right-0 bottom-0 z-1 custom-bg custom-shadow border border-white cursor-pointer text-white font-body opacity-0 hover:opacity-100'>
-
-                <div className='font-subheading text-2xl'>
-                    {item.name}
+            {!hover ?
+                <div className='PD_desc'>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                 </div>
+                :
 
-                <div className='font-body mb-4'>
-                    {item.price}
-                </div>
+                <div className='PD_actions'>
 
-                <div>
+                    <div>{item.price} INR</div>
+
                     {quantity === 0 ? (
 
                         <button
                             onClick={() => increaseCartQuantity(item.id)}
-                            className='border border-white px-4 py-1 pb-2 mt-2 flex'
+                            className='PD_actionBtn'
                         >
                             + Add to Cart
                         </button>
                     ) :
                         <div className='flex gap-8 items-center'>
 
-                            <div className='flex gap-0 justify-center my-2'>
+                            <div className='flex gap-0 justify-stretch'>
 
                                 <button
                                     onClick={() => decreaseCartQuantity(item.id)}
-                                    className='px-3 py-[2px] bg-[var(--primary)] text-white border border-white flex items-start text-lg'
+                                    className='bg-white text-[var(--secondary)] border border-white flex items-center text-lg rounded-none h-[30px]'
                                 >
                                     -
                                 </button>
 
-                                <div className='border border-white text-white px-4 py-[2px]'>
+                                <div className='border border-white text-white px-4 rounded-none h-[30px]'>
                                     {quantity}
                                 </div>
 
 
                                 <button
                                     onClick={() => increaseCartQuantity(item.id)}
-                                    className='px-3 py-[2px] bg-[var(--primary)] text-white border border-white flex items-start text-lg'
+                                    className='bg-white text-[var(--secondary)] border border-white flex items-center text-lg rounded-none h-[30px]'
                                 >
                                     +
                                 </button>
 
                             </div>
 
-                            <div className=''>
-                                <button onClick={() => removeFromCart(item.id)}
-                                    className='font-bold py-[4px] px-6 border border-white text-sm self-center'>
-                                    Delete
-                                </button>
-                            </div>
+                            {/* <div className=''> */}
+                            <button onClick={() => removeFromCart(item.id)}
+                                className='PD_actionBtn'>
+                                Delete
+                            </button>
+                            {/* </div> */}
                         </div>
                     }
                 </div>
-            </div>
-
+            }
         </div>
 
     )

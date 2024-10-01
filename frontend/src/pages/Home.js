@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <div>
       <Main/>
-      <About/>
       <ProductDisplay/>
+      <About/>
       <BoxEngagement/>
       {/* <About2/> */}
       <LoveLetters/>

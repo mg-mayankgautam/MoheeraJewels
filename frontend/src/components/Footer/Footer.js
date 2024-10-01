@@ -1,7 +1,6 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
-import footerimg from '../../assets/footerimg.png'
 
 const Footer = () => {
     return (
@@ -55,9 +54,9 @@ const Footer = () => {
 
             </div>
 
-            <div className='footerImg'>
+            {/* <div className='footerImg'>
                 <img src={footerimg} />
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -15,11 +15,11 @@ const BoxEngagement = () => {
             <div className='homeCEGContent'>
                 <div className='flex flex-col gap-[72px] pl-6 items-center'>
                     <div className='font-heading CEGText'>
-                        Begin your own <br />custom design journey <br />today by using
+                        Begin your own <span className='font-subheading'> custom design </span><br/> journey today by using our <br/>Engagement Ring Builder.
                     </div>
 
                     <Link to='/customengagementrings'>
-                        <button className=''>
+                        <button className='text-sm'>
                             <span>Custom Engagement Rings</span>
                         </button>
                     </Link>

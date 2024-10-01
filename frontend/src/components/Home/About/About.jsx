@@ -10,11 +10,15 @@ const About = () => {
 
             <div className='homeAboutContent'>
                 <div className='font-heading aboutText'>
-                    Lorem ipsum dolor <br/> sit amet, <br/>consectetuer <br/>adipiscing elit, sed
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                </div>
+
+                <div className='font-body aboutSubText'>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                 </div>
 
                 <Link to='/ourstory'>
-                    <button className=''>
+                    <button className='text-sm'>
                         <span>KNOW MORE ABOUT US</span>
                     </button>
                 </Link>

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 90fr 95fr;
     column-gap: 32px;
-    padding: 72px 72px 0px;
+    padding: 80px 72px 0px;
     min-height: calc(100vh);
     max-height: calc(100%);
     /* margin: 40px 0; */
@@ -29,16 +29,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 72px;
+    gap: 40px;
+    max-width: 380px;
+    place-self: center;
     text-align: left;
 }
 
 .aboutText{
     /* text-[60px] bg-[var(--primary)] text-white line-height- */
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 72px;
+    font-size: 48px;
     color: white;
     line-height: 60px;
+}
+
+.aboutSubText{
+    font-size: 14px;
+    color: white;
 }

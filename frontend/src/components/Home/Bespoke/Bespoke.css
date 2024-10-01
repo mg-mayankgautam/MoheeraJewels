@@ -12,7 +12,7 @@
 }
 
 .bespokeCard{
-    background-image: url(../../../assets/bespokebg.png);
+    /* background-image: url(../../../assets/bespokebg.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
@@ -29,7 +29,7 @@
     font-size: 14px;
 }
 .bespokeCard2{
-    background-image: url(../../../assets/bespokebg1.png);
+    /* background-image: url(../../../assets/bespokebg1.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;

@@ -14,7 +14,7 @@ const LoveLetters = () => {
             <div className='homeLLContent'>
                 <div className='flex gap-[16px] w-full pl-8'>
                     <div className='font-heading LLText'>
-                        Love Letters from some of our most cherished
+                        Love Letters from some of our most <span className='font-subheading'>cherished customers</span>
                     </div>
                     <div className='iconLL'>
                         <img src={icon} />
@@ -29,7 +29,7 @@ const LoveLetters = () => {
                     <div className='text-[72px] mb-[-72px] flex items-end'>"</div>
                 </div>
 
-                <div className='self-end pr-8 mt-8'>JANE DOE</div>
+                <div className='self-end pr-8 font-body1 text-white underline'>JANE DOE</div>
             </div>
         </div>
     )

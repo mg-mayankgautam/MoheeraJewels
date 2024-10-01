@@ -8,9 +8,9 @@
   @font-face {
     font-family: 'body';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-display: swap;
-    src: url(./assets/fonnts.com-Trade_Gothic_Next_LT_Pro_BdCn.ttf) format('woff2');
+    src: url(./assets/fonts/fonnts.com-Trade_Gothic_Next_LT_Pro_BdCn.ttf) format('woff2');
   }
 
   @font-face {
@@ -18,7 +18,15 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(./assets/fonnts.com-Vincente-Semi-Bold.otf) format('woff2');
+    src: url(./assets/fonts/fonnts.com-Vincente-Semi-Bold.otf) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'body1';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-display: swap;
+    src: url(./assets/fonts/MyriadPro-Regular.otf) format('woff2');
   }
 }
 

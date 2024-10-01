@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 105fr 90fr;
     gap: 32px;
-    padding: 72px 72px 0px;
+    padding: 80px 72px 0px;
     min-height: calc(100vh);
     max-height: calc(100%);
     margin: 40px 0;
@@ -31,15 +31,12 @@
     justify-content: flex-start;
     align-items: center;
     /* gap: 72px; */
-    text-align: right;
+    text-align: center;
+    /* max-width: 520px; */
 }
 
 .CEGText{
-    /* text-[60px] bg-[var(--primary)] text-white line-height- */
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 72px;
+    font-size: 48px;
     color: white;
     line-height: 60px;
 }

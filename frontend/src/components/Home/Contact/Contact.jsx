@@ -1,6 +1,5 @@
 import React from 'react'
 import './Contact.css'
-import contactimg from '../../../assets/contactimg.png'
 
 const Contact = () => {
   return (
@@ -17,7 +16,7 @@ const Contact = () => {
             </div>
 
             <div className='contactImgDiv'>
-                <img src={contactimg} alt="" />
+                {/* <img src={contactimg} alt="" /> */}
             </div>
         </div>
     </div>

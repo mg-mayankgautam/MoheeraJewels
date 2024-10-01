@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import imgBg from '../../assets/product1.png'
-import imgFront from '../../assets/page1sub.png'
+// import imgFront from '../../assets/page1sub.png'
 import './OurStory.css'
 
 const OurStory = () => {
@@ -17,7 +17,7 @@ const OurStory = () => {
                     <img src={imgBg} />
                 </div>
                 <div className='HomeAbout_FrontImgDiv'>
-                    <img src={imgFront} />
+                    {/* <img src={imgFront} /> */}
                 </div>
             </div>
 
