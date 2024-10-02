@@ -1,0 +1,70 @@
+.homeMain{
+    /* h-[calc(100vh-80px)] flex justify-center gap-0 relative px-[72px]' */
+    min-height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    padding: 0px 72px 0;
+    position: relative;
+}
+
+.MainVidDiv{
+    /* w-[50%] h-[100%] z-1 pointer-events-none bg-white */
+    width: calc(50%);
+    max-width: calc(50%);
+    /* height: 100%; */
+    /* max-height: 100%; */
+    /* z-index: 1; */
+    background-color: white;
+    position: relative;
+}
+
+.video{
+    /* object-cover max-h-[100%] max-w-[100%] */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.mainLinksAbsolute{
+    position: absolute;
+    top: 0px;
+    left: 72px;
+    right: 72px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.absImg{
+    max-width: 100%;
+}
+.absImg>img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.absLinksDiv{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.absLink{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
+.absLink:hover{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}

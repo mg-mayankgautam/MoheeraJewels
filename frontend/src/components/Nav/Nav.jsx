@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../assets/logo.png'
 import icon from '../../assets/icons/navicon.png'
 import cross from '../../assets/icons/crossicon.png'
 import search from '../../assets/icons/search.svg'
 import cart from '../../assets/icons/cart.svg'
 import heart from '../../assets/icons/heart.svg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useShoppingCart } from '../../context/ShoppingCartContext'
 import './Nav.css'
 
@@ -14,6 +14,13 @@ const Nav = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [navItemExpand, setNavItemExpand] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsNavOpen(false)
+  }, [location])
+  
 
   return (
     <>
@@ -39,83 +46,82 @@ const Nav = () => {
 
 
 
+        <div className={isNavOpen ? 'NavContainer navAnim1 active' : 'NavContainer navAnim1'}
+          onClick={() => setIsNavOpen(false)}
+        >
+          <div className={isNavOpen ? 'NavMenu navAnim active' : 'NavMenu navAnim'}>
 
-        <div className={isNavOpen ? 'NavMenu navAnim active' : 'NavMenu navAnim'}>
+            <div>
+              <div className='navHead'>SHOP</div>
 
-          <div>
-            <div className='navHead'>SHOP</div>
-
-            <div className='navItem'>
-              <Link to='/collection'>SHOP BY CATEOGRY</Link>
-            </div>
-            <div className={navItemExpand ? 'navItem selected' : 'navItem'} onClick={() => setNavItemExpand(!navItemExpand)}>
-              SHOP BY COLLECTION
-            </div>
-
-            <div className={navItemExpand ? 'navAnim active navItemExpand' : 'navAnim navItemExpand'}>
               <div className='navItem'>
-                <Link to='/collection'>on the move</Link>
+                <Link to='/collection'>SHOP BY CATEOGRY</Link>
+              </div>
+              <div className={navItemExpand ? 'navItem selected' : 'navItem'} onClick={() => setNavItemExpand(!navItemExpand)}>
+                SHOP BY COLLECTION
+              </div>
+
+              <div className={navItemExpand ? 'navAnim active navItemExpand' : 'navAnim navItemExpand'}>
+                <div className='navItem'>
+                  <Link to='/collection'>on the move</Link>
+                </div>
+                <div className='navItem'>
+                  <Link to='/collection'>essentials</Link>
+                </div>
+              </div>
+
+              <div className='navItem'>
+                <Link to='/collection'>NEW ARRIVALS</Link>
+              </div>
+            </div>
+
+            <div>
+              <div className='navHead'>DISCOVER</div>
+
+              <div className='navItem'>
+                <Link to='/ourstory'>about us</Link>
               </div>
               <div className='navItem'>
-                <Link to='/collection'>essentials</Link>
+                <Link to='/bespokeprocess'>Bespoke Process</Link>
               </div>
+              <div className='navItem'>
+                <Link to='/'>Love letters</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Book an Appointment</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Contact</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Connect on Instagram</Link>
+              </div>
+
             </div>
 
-            <div className='navItem'>
-              <Link to='/collection'>NEW ARRIVALS</Link>
-            </div>
-          </div>
 
+            <div>
+              <div className='navHead'>Care</div>
 
+              <div className='navItem'>
+                <Link to=''>FAQs</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Size Guide</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Lab Diamond Guidance</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Privacy POlicy</Link>
+              </div>
+              <div className='navItem'>
+                <Link to=''>Terms and Conditions</Link>
+              </div>
 
-          <div>
-            <div className='navHead'>DISCOVER</div>
-
-            <div className='navItem'>
-              <Link to='/ourstory'>about us</Link>
-            </div>
-            <div className='navItem'>
-              <Link to='/bespokeprocess'>Bespoke Process</Link>
-            </div>
-            <div className='navItem'>
-              <Link to='/'>Love letters</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Book an Appointment</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Contact</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Connect on Instagram</Link>
-            </div>
-
-          </div>
-
-
-
-
-          <div>
-            <div className='navHead'>Care</div>
-
-            <div className='navItem'>
-              <Link to=''>FAQs</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Size Guide</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Lab Diamond Guidance</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Privacy POlicy</Link>
-            </div>
-            <div className='navItem'>
-              <Link to=''>Terms and Conditions</Link>
             </div>
 
           </div>
-
         </div>
 
       </div>
@@ -125,3 +131,81 @@ const Nav = () => {
 }
 
 export default Nav
+
+//   < div className = { isNavOpen? 'NavMenu navAnim active': 'NavMenu navAnim' } >
+
+// <div>
+//   <div className='navHead'>SHOP</div>
+
+//   <div className='navItem'>
+//     <Link to='/collection'>SHOP BY CATEOGRY</Link>
+//   </div>
+//   <div className={navItemExpand ? 'navItem selected' : 'navItem'} onClick={() => setNavItemExpand(!navItemExpand)}>
+//     SHOP BY COLLECTION
+//   </div>
+
+//   <div className={navItemExpand ? 'navAnim active navItemExpand' : 'navAnim navItemExpand'}>
+//     <div className='navItem'>
+//       <Link to='/collection'>on the move</Link>
+//     </div>
+//     <div className='navItem'>
+//       <Link to='/collection'>essentials</Link>
+//     </div>
+//   </div>
+
+//   <div className='navItem'>
+//     <Link to='/collection'>NEW ARRIVALS</Link>
+//   </div>
+// </div>
+
+
+
+// <div>
+//   <div className='navHead'>DISCOVER</div>
+
+//   <div className='navItem'>
+//     <Link to='/ourstory'>about us</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to='/bespokeprocess'>Bespoke Process</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to='/'>Love letters</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Book an Appointment</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Contact</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Connect on Instagram</Link>
+//   </div>
+
+// </div>
+
+
+
+
+// <div>
+//   <div className='navHead'>Care</div>
+
+//   <div className='navItem'>
+//     <Link to=''>FAQs</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Size Guide</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Lab Diamond Guidance</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Privacy POlicy</Link>
+//   </div>
+//   <div className='navItem'>
+//     <Link to=''>Terms and Conditions</Link>
+//   </div>
+
+// </div>
+
+// </div >
