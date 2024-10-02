@@ -8,6 +8,7 @@ import heart from '../../assets/icons/heart.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { useShoppingCart } from '../../context/ShoppingCartContext'
 import './Nav.css'
+import Cart from '../Cart/Cart'
 
 
 const Nav = () => {
@@ -19,13 +20,16 @@ const Nav = () => {
 
   useEffect(() => {
     setIsNavOpen(false)
+    setCartIsOpen(false)
   }, [location.pathname])
 
   const closeNav = (e) => {
-    if (e.target.classList.contains('NavContainer')) { 
-      setIsNavOpen(false) 
+    if (e.target.classList.contains('NavContainer')) {
+      setIsNavOpen(false)
     }
   }
+
+  const { cartQuantity, cartIsOpen, setCartIsOpen } = useShoppingCart();
 
 
   return (
@@ -46,7 +50,15 @@ const Nav = () => {
 
         <div className='flex justify-end items-center gap-12'>
           <Link to='/'><img src={search} className='w-4 max-w-[100%]' /></Link>
-          <Link to='/cart'><img src={cart} className='w-4 max-w-[100%]' /></Link>
+
+          <div className='relative cursor-pointer' onClick={() => setCartIsOpen(true)}>
+            <img src={cart} className='w-4 max-w-[100%]' />
+
+            {cartQuantity > 0 ?
+              <div className='absolute bottom-[-10px] right-[-10px] rounded-xl bg-white text-[var(--secondary)] text-sm custom-shadow h-4 w-4 flex items-center justify-center'>{cartQuantity}</div>
+              : null}
+          </div>
+
           <Link to='/'><img src={heart} className='w-4 max-w-[100%]' /></Link>
         </div>
 
@@ -131,6 +143,8 @@ const Nav = () => {
         </div>
 
       </div>
+
+      {cartIsOpen ? <Cart /> : <></>}
 
     </>
   )

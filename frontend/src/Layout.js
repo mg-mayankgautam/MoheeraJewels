@@ -73,7 +73,7 @@ const Layout = () => {
 
       <Outlet />
 
-      {cartQuantity > 0 ?
+      {/* {cartQuantity > 0 ?
         <div className='px-8 fixed right-0 bottom-8  rounded-2xl flex justify-center items-center'>
           <Link to='/cart'>
             <img src={icon} className='h-8 object-contain w-full' />
@@ -82,7 +82,7 @@ const Layout = () => {
           <div className='absolute bottom-[-10px] right-[20px] rounded-xl bg-[var(--secondary)] text-white custom-shadow h-6 w-6 flex items-center justify-center'>{cartQuantity}</div>
         </div>
         : null
-      }
+      } */}
 
       <Footer />
     </div>

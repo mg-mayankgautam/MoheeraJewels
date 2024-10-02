@@ -15,24 +15,34 @@ const CartItem = ({ item }) => {
     console.log(quantity)
 
     return (
-        <div className='CartItem'>
+        <div className='CartItem relative'>
+
+            <div onClick={() => removeFromCart(item.id)}
+                className='absolute top-[-10px] right-0 text-2xl cursor-pointer'>
+                ×
+            </div>
+
             <div className='cartItemImg'>
                 <img src={require(`../../assets/${cartItem.image}`)} alt="" />
             </div>
 
             <div className='cartItemInfo'>
-                <div className='flex justify-between'>
-                    <div className=' text-2xl'>
-                        {cartItem.name}
-                    </div>
-                    <div className='font-bold'>
-                        $ {cartItem.price}
-                    </div>
+                <div className='text-[var(--primary)] text-2xl font-heading uppercase'>
+                    {cartItem.name}
+                </div>
+                <div className=''>
+                    {cartItem.modelno}
+                </div>
+                <div className='font-bodyone'>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy read more...
+                </div>
+                <div className='font-bold'>
+                    INR {cartItem.price}
                 </div>
 
 
 
-                <div className='flex gap-8 items-center'>
+                {/* <div className='flex gap-8 items-center'>
 
                     <div className='flex gap-0 justify-center my-2'>
 
@@ -63,7 +73,7 @@ const CartItem = ({ item }) => {
                             Delete
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

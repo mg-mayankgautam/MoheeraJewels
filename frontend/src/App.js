@@ -29,7 +29,7 @@ function App() {
           <Route path="collection" element={<Collection />} />
           <Route path="bespokeprocess" element={<Bespoke />} />
           <Route path="customengagementrings" element={<CustomEngRings />} />
-          <Route path="cart" element={<Cart />} />
+          {/* <Route path="cart" element={<Cart />} /> */}
 
           {/* <Route path="search/:value" element={<SearchPage searchValue={searchValue} setSearchValue={setSearchValue} />}/> */}
 
