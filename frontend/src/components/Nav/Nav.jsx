@@ -17,10 +17,16 @@ const Nav = () => {
 
   const location = useLocation();
 
-  // useEffect(() => {
-  //   setIsNavOpen(false)
-  // }, [location.pathname])
-  
+  useEffect(() => {
+    setIsNavOpen(false)
+  }, [location.pathname])
+
+  const closeNav = (e) => {
+    if (e.target.classList.contains('NavContainer')) { 
+      setIsNavOpen(false) 
+    }
+  }
+
 
   return (
     <>
@@ -47,7 +53,7 @@ const Nav = () => {
 
 
         <div className={isNavOpen ? 'NavContainer navAnim1 active' : 'NavContainer navAnim1'}
-          // onClick={() => setIsNavOpen(false)}
+          onClick={(e) => closeNav(e)}
         >
           <div className={isNavOpen ? 'NavMenu navAnim active' : 'NavMenu navAnim'}>
 
