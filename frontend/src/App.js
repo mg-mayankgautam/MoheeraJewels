@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Collection from './components/Collection/Collection';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import OurStory from './components/OurStory/OurStory';
-import Bespoke from './components/Home/Bespoke/Bespoke';
+import Bespoke from './components/Bespoke/Bespoke';
 import CustomEngRings from './components/Home/CustomEngRings/CustomEngRings';
 import Cart from './components/Cart/Cart';
 import AdminLogin from './AdminPages/AdminLogin';

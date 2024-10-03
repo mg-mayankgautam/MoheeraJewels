@@ -20,10 +20,10 @@ const Collection = () => {
 
 
         <div className='flex gap-8 text-sm mb-8'>
-          <button className='PD_shopBtns selected'>shop all products</button>
-          <button className='PD_shopBtns'>shop rings</button>
-          <button className='PD_shopBtns'>shop necklaces</button>
-          <button className='PD_shopBtns'>shop earrings</button>
+          <button className='C_shopBtns selected'>shop all products</button>
+          <button className='C_shopBtns'>shop rings</button>
+          <button className='C_shopBtns'>shop necklaces</button>
+          <button className='C_shopBtns'>shop earrings</button>
         </div>
 
 
@@ -44,8 +44,16 @@ const Collection = () => {
         </div>
 
 
-        <div className='font-heading text-white text-[48px] text-left'>
-          See More
+        <div className='max-w-[1100px] mx-auto w-full'>
+          <div className='font-heading text-white text-[48px] text-left'>See More</div>
+          <div className='flex gap-4'>
+            <div className='bg-white w-full h-[250px] relative'>
+              <div className='absolute bottom-4 left-0 right-0 seemoreLink'>EXPLORE NEW pendants</div>
+            </div>
+            <div className='bg-white w-full h-[250px] relative'>
+              <div className='absolute bottom-4 left-0 right-0 seemoreLink'>EXPLORE earrings</div>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -1,9 +1,11 @@
 .Collection{
-    padding: 72px 72px;
+    padding: 48px 72px 72px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin: 0 auto;
+    max-width: 1300px;
 }
 
 .custom-shadow {
@@ -84,6 +86,30 @@
     color: white;
 }
 
+.C_shopBtns{
+    background-color: white;
+    color: var(--secondary);
+}
+.C_shopBtns.selected{
+    background-color: var(--primary);
+    color: white;
+}
+.C_shopBtns:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+.seemoreLink{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--secondary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.seemoreLink:hover{
+    color: var(--primary);
+}
 
 
 .AddedToCartModalContainer{
