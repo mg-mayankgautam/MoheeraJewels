@@ -13,6 +13,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 
+app.use(cookieParser())
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +27,7 @@ app.use(cors(
     {
         // origin: process.env.FRONTEND_URL, 
         // origin: 'https://covendx.com', 
-        origin: "http://localhost:3000",
+        origin: "http://localhost:3002",
         // origin: '*',
         credentials: true,
         withCredentials: true
@@ -37,7 +38,7 @@ app.use((req, res, next) => {
     res.setHeader(
         "Access-Control-Allow-Origin",
         // "https://covendx.com"
-        "http://localhost:3000"
+        "http://localhost:3002"
     );
     res.setHeader(
         "Access-Control-Allow-Headers",

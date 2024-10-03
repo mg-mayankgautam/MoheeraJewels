@@ -15,7 +15,7 @@ const Layout = () => {
 
 
 
-
+  axios.defaults.withCredentials = true
   const { auth } = useAuth();
   const { setAuth } = useAuth();
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const Layout = () => {
             setAuth(TokenData);//isme role set nahi ho raha
             console.log(Role, 'brkpnt 3')
             // console.log(state.prev.pathname)
-            navigate('/dashboard');
+            navigate('/admindashboard');
           }
           else {
             console.log(Role, 'role not found')

@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 module.exports.handleRefreshToken = async (req, res) => {
-    // console.log('reached refresh')
+     console.log('reached refresh')
     const cookies = req.cookies;
     console.log(cookies);
 
@@ -37,7 +37,7 @@ module.exports.handleRefreshToken = async (req, res) => {
                 );
 
 
-
+                console.log('breakpoint');
             }
             else res.send(false);
         })
