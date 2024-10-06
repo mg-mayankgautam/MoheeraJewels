@@ -96,7 +96,7 @@ const Bespoke = () => {
                 <img src={footer} className='object-contain max-h-[100%] max-w-[100%]' />
             </div>
 
-            <div className='flex flex-col items-center gap-2'>
+            <div className='flex flex-col items-center gap-2 text-left'>
                 <div>
                     HIT US UP AND LET'S WORK TOGETHER TO <br />CREATE A STUNNING PIECE JUST FOR YOU!
                 </div>

@@ -4,7 +4,6 @@ import About from '../components/Home/About/About'
 import ProductDisplay from '../components/Home/ProductDisplay/ProductDisplay'
 import BoxEngagement from '../components/Home/BoxEngagement/BoxEngagement'
 import LoveLetters from '../components/Home/LoveLetters/LoveLetters'
-import Contact from '../components/Home/Contact/Contact'
 import About2 from '../components/Home/About2/About2'
 
 const Home = () => {
@@ -21,7 +20,6 @@ const Home = () => {
       <BoxEngagement/>
       {/* <About2/> */}
       <LoveLetters/>
-      {/* <Contact/> */}
     </div>
   )
 }

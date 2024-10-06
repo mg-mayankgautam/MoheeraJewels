@@ -1,0 +1,55 @@
+.BookAppointment {
+    display: flex;
+    padding: 48px 72px 80px;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.BA_head {
+    font-family: 'heading';
+    font-size: 24px;
+}
+
+.BA_container {
+    border: 1px solid white;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+    color: white;
+}
+
+.pinkHover{
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.pinkHover:hover{
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 4px 12px;
+    text-align: center;
+}
+
+.timeSlots{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.personalInfo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-items: center; */
+    text-align: center;
+    margin: 24px 0;
+    gap: 32px;
+}
