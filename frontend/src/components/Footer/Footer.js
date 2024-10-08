@@ -33,7 +33,7 @@ const Footer = () => {
                             <Link to='/ourstory'>Know More about us</Link>
                         </div>
                         <div className='footerItem'>
-                            <Link to=''>Book an Appointment</Link>
+                            <Link to='/bookanappointment'>Book an Appointment</Link>
                         </div>
                         <div className='footerItem'>
                             <Link to='customengagementrings'>Custom Engagement</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                             <Link to='/bespokeprocess'>Bespoke Process</Link>
                         </div>
                         <div className='footerItem'>
-                            <Link to='/collection'>Contact us</Link>
+                            <Link to='/contactus'>Contact us</Link>
                         </div>
 
                         <div className='footerItem'>
@@ -74,7 +74,7 @@ const Footer = () => {
                     <div>
                         <div className='footerHead'>Customer Care</div>
                         <div className='footerItem'>
-                            <Link to=''>FAQs</Link>
+                            <Link to='/faqs'>FAQs</Link>
                         </div>
                         <div className='footerItem'>
                             <Link to=''>Sizing Guide</Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                             <Link to=''>Jewellery Care</Link>
                         </div>
                         <div className='footerItem'>
-                            <Link to=''>Lab Diamonds</Link>
+                            <Link to='/labdiamondsguidance'>Lab Diamonds</Link>
                         </div>
                     </div>
 

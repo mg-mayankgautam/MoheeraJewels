@@ -106,10 +106,10 @@ const Nav = () => {
                 <Link to='/'>Love letters</Link>
               </div>
               <div className='navItem'>
-                <Link to=''>Book an Appointment</Link>
+                <Link to='/bookanappointment'>Book an Appointment</Link>
               </div>
               <div className='navItem'>
-                <Link to=''>Contact</Link>
+                <Link to='/contactus'>Contact</Link>
               </div>
               <div className='navItem'>
                 <Link to=''>Connect on Instagram</Link>
@@ -122,13 +122,13 @@ const Nav = () => {
               <div className='navHead'>Care</div>
 
               <div className='navItem'>
-                <Link to=''>FAQs</Link>
+                <Link to='/faqs'>FAQs</Link>
               </div>
               <div className='navItem'>
                 <Link to=''>Size Guide</Link>
               </div>
               <div className='navItem'>
-                <Link to=''>Lab Diamond Guidance</Link>
+                <Link to='/labdiamondsguidance'>Lab Diamond Guidance</Link>
               </div>
               <div className='navItem'>
                 <Link to=''>Privacy POlicy</Link>

@@ -6,12 +6,16 @@ import Home from './pages/Home';
 import Collection from './components/Collection/Collection';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import OurStory from './components/OurStory/OurStory';
-import Bespoke from './components/Home/Bespoke/Bespoke';
+import Bespoke from './components/Bespoke/Bespoke';
 import CustomEngRings from './components/Home/CustomEngRings/CustomEngRings';
 import Cart from './components/Cart/Cart';
 import AdminLogin from './AdminPages/AdminLogin';
 import RequireAuth from './components/RequireAuth';
 import AdmindashBoard from './AdminPages/AdmindashBoard';
+import BookAppointment from './components/BookAppointment/BookAppointment';
+import Contact from './components/Contact/Contact';
+import Faq from './components/Faq/Faq';
+import LabGuidance from './components/LabGuidance/LabGuidance';
 
 function App() {
 
@@ -29,6 +33,10 @@ function App() {
           <Route path="collection" element={<Collection />} />
           <Route path="bespokeprocess" element={<Bespoke />} />
           <Route path="customengagementrings" element={<CustomEngRings />} />
+          <Route path="bookanappointment" element={<BookAppointment />} />
+          <Route path="contactus" element={<Contact />} />
+          <Route path="faqs" element={<Faq />} />
+          <Route path="labdiamondsguidance" element={<LabGuidance />} />
           {/* <Route path="cart" element={<Cart />} /> */}
 
           {/* <Route path="search/:value" element={<SearchPage searchValue={searchValue} setSearchValue={setSearchValue} />}/> */}

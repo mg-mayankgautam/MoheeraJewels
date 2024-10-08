@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import imgBg from '../../assets/product1.png'
-// import imgFront from '../../assets/page1sub.png'
+import main from '../../assets/about/aboutusmain.png'
+import sub from '../../assets/about/aboutsub.png'
+import line from '../../assets/about/aboutLine.png'
 import './OurStory.css'
 
 const OurStory = () => {
@@ -11,33 +12,50 @@ const OurStory = () => {
 
 
     return (
-        <div className='AboutUsPage'>
-            <div className='HomeAboutImgContainer'>
-                <div className='HomeAbout_BgImgDiv'>
-                    <img src={imgBg} />
+        <div className='KnowMoreAboutUs'>
+
+            <div className='px-[72px]'>
+                <button className='text-white'>know more about us</button>
+                <div className='text-[10px] text-white text-left px-4 mt-4'>HOME/ ABOUT US</div>
+            </div>
+
+            <div className='flex flex-col gap-4 items-center px-[72px]'>
+                <div className='font-subheading'>
+                    “Jewellery, to us, is a statement about how we perceive and interact with the world.”
                 </div>
-                <div className='HomeAbout_FrontImgDiv'>
-                    {/* <img src={imgFront} /> */}
+                <div className='w-full max-w-[1000px]'>
+                    <img src={main} className='object-contain w-full max-h-[100%] max-w-[100%]' />
+                </div>
+                <div className='mx-auto px-[72px]'>
+                    <img src={line} />
                 </div>
             </div>
 
-            <div className='HomeAboutContent'>
-                <div className='font-subheading text-2xl'>
-                    Moheera Jewels
+
+            <div className='AboutUsGrid'>
+
+                <div className='flex flex-col text-[18px] text-white gap-4 text-left justify-self-center max-w-[450px]'>
+                    <div>Across centuries of progress, our relationship with jewellery has evolved and continues to grow even today. With increasing access to lab diamonds, it is easier for one to be dynamic and versatile with their accessories – but with the right jeweller. </div>
+                    <div>At Moheera, we see lab diamonds as an opportunity to create lifestyle products that integrate style and utility, perfect for everyday wear or special occasions. We are particularly excited about exploring bold and cruelty-free diamonds that make a statement without breaking the bank! </div>
+                    <div>As a brand, we look forward to remaining continually relevant to the modern woman and man. Ultimately, we strive to redefine the traditional jeweller-client dynamic by building personal relationships and curating pieces that resonate deeply with each client.</div>
                 </div>
-                <div className='font-heading text-6xl'>
-                    OUR STORY
+
+                <div className='AboutUsImgContainer'>
+                    <img src={sub} />
                 </div>
-                <div className='font-body'>
-                    Jewellery, to us, is a statement about how we perceive and interact with the world. Across centuries of progress, our relationship with jewellery has evolved and continues to grow even today. With increasing access to lab diamonds, it is easier for one to be dynamic and versatile with their accessories – but with the right jeweller. <br /><br />
-                    At Moheera, we see lab diamonds as an opportunity to create lifestyle products that integrate style and utility, perfect for everyday wear or special occasions. We are particularly excited about exploring bold and cruelty-free diamonds that make a statement without breaking the bank!<br /><br />
-                    As a brand, we look forward to remaining continually relevant to the modern woman and man. Ultimately, we strive to redefine the traditional jeweller-client dynamic by building personal relationships and curating pieces that resonate deeply with each client.<br /><br />
-                    Hit us up and let's work together to create a stunning piece just for you!
-                </div>
-                <button className='mt-4 text-xs font-bold py-3 px-6 border-2 border-[var(--primary)] self-start'>
-                    BOOK A DISCOVERY CALL
-                </button>
+
             </div>
+
+            <div className='flex flex-col items-center gap-2'>
+                <div>
+                    HIT US UP AND LET'S WORK TOGETHER TO <br />CREATE A STUNNING PIECE JUST FOR YOU!
+                </div>
+                <div className='font-subheading text-white mt-4'>
+                    contact us or book a discovery call
+                </div>
+                <button className='text-white w-[160px]'>contact us</button>
+            </div>
+
         </div>
     )
 }

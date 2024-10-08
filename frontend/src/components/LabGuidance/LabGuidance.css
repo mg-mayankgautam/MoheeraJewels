@@ -1,0 +1,21 @@
+.ldg {
+    display: flex;
+    padding: 48px 0px 120px;
+    gap: 24px;
+    flex-direction: column;
+}
+.LDG_Box{
+    /* max-w-[1000px] w-full p-6 flex flex-col */
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 72px;
+}
+
+@media only screen and (orientation: portrait) {
+    /* .FAQs{
+        
+    } */
+}
