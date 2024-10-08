@@ -6,11 +6,10 @@ const router = express.Router();
 // const upload = multer({ storage: storage })
 // require("dotenv").config();
 
-const authController = require('../controller/authController');
+const loveLetterController = require('../controller/loveLetterController');
 
 
-router.post('/login', authController.logIn)
-router.post('/signup', authController.signUp);
-// router.post('/loveletter', authController.loveLetter);
+
+router.post('/post', loveLetterController.postLoveLetter);
 
 module.exports = router;

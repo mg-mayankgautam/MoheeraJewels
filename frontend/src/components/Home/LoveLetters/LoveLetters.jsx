@@ -2,8 +2,10 @@ import React from 'react'
 import './LoveLetters.css'
 import Img from '../../../assets/loveletters/loveletters.png'
 import icon from '../../../assets/loveletters/lovelettersicon.png'
+import { useState } from 'react'
 
 const LoveLetters = () => {
+    const [letter, setLetter] = useState([{},{}])
     return (
         <div className='LoveLetters'>
 
