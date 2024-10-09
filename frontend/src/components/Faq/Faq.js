@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Faq.css'
 import up from '../../assets/icons/up.png'
 import down from '../../assets/icons/down.png'
+import { Link } from 'react-router-dom'
 
 const Faq = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     const [selected, setSelected] = useState(null);
 
@@ -22,7 +27,7 @@ const Faq = () => {
 
             <div>
                 <button className='text-white'>FAQ</button>
-                <div className='text-[10px] text-white text-left px-4 mt-4'>HOME/ FREQUENTLY ASKED QUESTIONS</div>
+                <div className='text-[10px] text-white text-left px-4 mt-4'><Link to='/' className='pinkHover'>HOME</Link> / FREQUENTLY ASKED QUESTIONS</div>
             </div>
 
             <div className='BA_head'>FREQUENTLY ASKED QUESTIONS</div>

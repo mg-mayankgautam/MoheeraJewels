@@ -27,3 +27,25 @@
 .PD_shopBtns:hover{
     background-color: var(--primary);
 }
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    color: transparent;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.swiper-button-prev::after{
+    background-image: url(../../../assets/icons/left.png);
+    /* transform: translateX(-24px); */
+}
+.swiper-button-next::after{
+    background-image: url(../../../assets/icons/right.png);
+}

@@ -9,6 +9,10 @@ import useAuth from '../hooks/useAuth';
 
 const AdminLogin = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
 
@@ -66,20 +70,38 @@ const AdminLogin = () => {
 
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Email ID"
-        value={id}
-        onChange={(e) => setId(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleloginSubmit}>Log In</button>
+    <div className='p-[72px] flex flex-col items-center gap-10 min-h-[calc(100vh-80px)]'>
+
+      <div className='font-heading text-[48px]'>LOGIN</div>
+
+      <div className='flex flex-col gap-6 w-full max-w-[400px] text-left'>
+
+        <div className='relative'>
+
+          <div>EMAIL ID *</div>
+          <input className='input w-[100%] text-[var(--primary)] my-2 font-subheading'
+            type="text"
+            placeholder="Email ID"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          />
+          {/* <div className='absolute top-[-16px] right-0 left-0 text-[var(--primary)] text-[10px]'>first name is required. please enter your first name*</div> */}
+        </div>
+
+        <div className='relative'>
+          <div>PASSWORD *</div>
+          <input className='input w-[100%] text-[var(--primary)] my-2 font-subheading'
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {/* <div className='absolute top-[-16px] right-0 left-0 text-[var(--primary)] text-[10px]'>first name is required. please enter your first name*</div> */}
+        </div>
+
+        <button className='mt-4' onClick={handleloginSubmit}>Log In</button>
+
+      </div>
     </div>
   )
 }

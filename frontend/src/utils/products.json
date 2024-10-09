@@ -38,5 +38,25 @@
         "price": 15000,
         "image": "product1.png",
         "carat": ["14K", "18K", "22K"]
+    },
+    {
+        "id": 5,
+        "name": "Product FOUR",
+        "modelno": "MW R006",
+        "category": "All",
+        "description": "",
+        "price": 15000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
+    },
+    {
+        "id": 6,
+        "name": "Product FOUR",
+        "modelno": "MW R006",
+        "category": "All",
+        "description": "",
+        "price": 15000,
+        "image": "product1.png",
+        "carat": ["14K", "18K", "22K"]
     }
 ]

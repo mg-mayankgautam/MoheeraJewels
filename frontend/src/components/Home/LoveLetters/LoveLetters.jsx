@@ -4,28 +4,31 @@ import Img from '../../../assets/loveletters/loveletters.png'
 import icon from '../../../assets/loveletters/lovelettersicon.png'
 import { useState } from 'react'
 import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const LoveLetters = () => {
-    const [letter, setLetter] = useState([])
+    const [letters, setLetters] = useState([])
 
     useEffect(() => {
 
-
         const getloveletters = async () => {
-        try { const data = await axios.get('http://localhost:4700/loveletters/get')
+            try {
+                const data = await axios.get('http://localhost:4700/loveletters/get')
 
-
-            // console.log(data.data);
-            setLetter(data.data);
-         }
-         catch (error) { console.log('There was an error getting the love letters!', error); }
+                console.log(data.data);
+                setLetters(data.data);
+            }
+            catch (error) { console.log('There was an error getting the love letters!', error); }
         }
-         getloveletters();
 
+        getloveletters();
 
     }, [])
 
-    console.log(letter);
 
 
     return (
@@ -45,15 +48,52 @@ const LoveLetters = () => {
                     </div>
                 </div>
 
-                <div className='flex gap-[4px] text-white pr-8'>
-                    <div className='text-[72px] mt-[-48px] flex items-start'>"</div>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
+                    // pagination={{
+                    //   clickable: true,
+                    // }}
+                    navigation={false}
+                    // breakpoints={{
+                    //     250: {
+                    //         slidesPerView: 1,
+                    //         spaceBetween: 5,
+                    //     },
+                    //     800: {
+                    //         slidesPerView: 1,
+                    //         spaceBetween: 10,
+                    //     },
+                    // }}
+                    centeredSlides={false}
+                    modules={[Pagination, Navigation, Autoplay]}
+                    className="mySwiper"
+                >
+                    {letters && letters.length > 0 && letters.map((letter, i) =>
+                        <SwiperSlide key={i}>
+                            <div className='flex gap-[4px] text-white max-w-[500px]'>
+                                <div className='text-[72px] mt-[-32px] flex items-start'>“</div>
 
-                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</div>
+                                <div className='mt-[32px]'>{letter.message}</div>
 
-                    <div className='text-[72px] mb-[-72px] flex items-end'>"</div>
-                </div>
+                                <div className='text-[72px] mb-[-72px] flex items-end'>”</div>
+                            </div>
 
-                <div className='self-end pr-8 font-bodyone text-white underline'>JANE DOE</div>
+                            <div className='text-right pr-8 font-bodyone text-white underline w-full max-w-[500px] uppercase'>{letter.name}</div>
+                        </SwiperSlide>
+                    )}
+
+                    {/* <div class="swiper-button-prev custom-prev"></div>
+                    <div class="swiper-button-next custom-next"></div> */}
+
+                </Swiper>
             </div>
         </div>
     )

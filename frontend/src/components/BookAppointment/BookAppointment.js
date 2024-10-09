@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import down from '../../assets/icons/down.png'
 import './BookAppointment.css'
+import { Link } from 'react-router-dom'
 
 const BookAppointment = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
+
     return (
         <div className='BookAppointment'>
             <div>
                 <button className='text-white'>BOOK AN APPOINTMENT</button>
-                <div className='text-[10px] text-white text-left px-4 mt-4'>HOME/ BOOK AN APPOINTMENT</div>
+                <div className='text-[10px] text-white text-left px-4 mt-4'><Link to='/' className='pinkHover'>HOME</Link> / BOOK AN APPOINTMENT</div>
             </div>
 
             <div className='BA_head'>BOOK AN APPOINTMENT</div>
@@ -161,7 +168,7 @@ const BookAppointment = () => {
                     THANK YOU FOR CONTACTING US. WE WILL BE IN TOUCH VIA EMAIL AND PHONE. FOR ANY URGENT REQUIRMENT PLEASE GO TO OUR CONTACT US PAGE.
                     <br />Additionally you can browse through our catalogue and pick out the ones you like for reference.
                 </div>
-                <button className='w-[160px] mt-4'>contact us</button>
+                <Link to='/contactus'><button className='w-[160px] mt-4'>contact us</button></Link>
             </div>
 
         </div>

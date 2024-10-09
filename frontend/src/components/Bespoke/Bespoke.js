@@ -18,7 +18,7 @@ const Bespoke = () => {
         <div className='Bespoke'>
             <div>
                 <button className='text-white'>Bespoke process</button>
-                <div className='text-[10px] text-white text-left px-4 mt-4'>HOME/ BESPOKE PROCESS</div>
+                <div className='text-[10px] text-white text-left px-4 mt-4'><Link to='/' className='pinkHover'>HOME</Link>/ BESPOKE PROCESS</div>
             </div>
 
             <div className='max-w-[1000px] self-center'>
@@ -35,7 +35,7 @@ const Bespoke = () => {
                         <div className='font-subheading text-white mt-4'>
                             contact us or book a discovery call
                         </div>
-                        <button className='text-white w-[160px]'>contact us</button>
+                        <Link to='/contactus'><button className='text-white w-[160px]'>contact us</button></Link>
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@ const Bespoke = () => {
                 <div className='font-subheading text-white mt-4'>
                     contact us or book a discovery call
                 </div>
-                <button className='text-white w-[160px]'>contact us</button>
+                <Link to='/contactus'><button className='text-white w-[160px]'>contact us</button></Link>
             </div>
 
         </div>

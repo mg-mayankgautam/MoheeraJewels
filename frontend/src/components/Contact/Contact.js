@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutImg from '../../assets/about/homeabout.png'
 import { Link } from 'react-router-dom'
 import './Contact.css'
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
 
         <div className='Contact'>
@@ -19,7 +24,7 @@ const Contact = () => {
                             Got questions or just want to chat with us about diamonds? Book a discovery call - We're here to make your brilliance a reality!
                         </div>
 
-                        <Link to='/ourstory'>
+                        <Link to='/bookanappointment'>
                             <button className=''>
                                 BOOK AN APPOINTMENT
                             </button>

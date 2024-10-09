@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './LabGuidance.css'
 import ldg from '../../assets/ldg.png'
+import { Link } from 'react-router-dom'
 
 const LabGuidance = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className='ldg'>
 
             <div className='px-[72px]'>
                 <button className='text-white'>LAB DIAMOND GUIDANCE</button>
-                <div className='text-[10px] text-white text-left px-4 mt-4'>HOME/ LAB DIAMOND GUIDANCE</div>
+                <div className='text-[10px] text-white text-left px-4 mt-4'><Link to='/' className='pinkHover'>HOME</Link> / LAB DIAMOND GUIDANCE</div>
             </div>
 
             <div className='BA_head'>LAB DIAMOND GUIDANCE</div>
@@ -104,7 +109,7 @@ const LabGuidance = () => {
                 <div className='font-subheading text-white mt-4'>
                     contact us or book a discovery call
                 </div>
-                <button className='text-white w-[160px]'>contact us</button>
+                <Link to='/contactus'><button className='text-white w-[160px]'>contact us</button></Link>
             </div>
         </div>
     )

@@ -18,11 +18,11 @@ const BoxEngagement = () => {
                         Begin your own <span className='font-subheading'> custom design </span><br/> journey today by using our <br/>Engagement Ring Builder.
                     </div>
 
-                    <Link to='/customengagementrings'>
+                    {/* <Link to='/customengagementrings'> */}
                         <button className='text-sm'>
                             <span>Custom Engagement Rings</span>
                         </button>
-                    </Link>
+                    {/* </Link> */}
                 </div>
             </div>
 
