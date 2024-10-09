@@ -11,5 +11,6 @@ const loveLetterController = require('../controller/loveLetterController');
 
 
 router.post('/post', loveLetterController.postLoveLetter);
+router.get('/get', loveLetterController.getLoveLetter);
 
 module.exports = router;

@@ -36,3 +36,18 @@ module.exports.postLoveLetter = async (req, res) => {
 
 
 };
+
+
+module.exports.getLoveLetter = async (req, res) => {
+
+    loveLetterDB.find({})
+        .then((loveLetters) => {
+            console.log(loveLetters);
+            res.send(loveLetters);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: "Failed to get love letters" });
+        });
+
+}

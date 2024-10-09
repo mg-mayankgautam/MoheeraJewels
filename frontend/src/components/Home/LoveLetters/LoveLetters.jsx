@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './LoveLetters.css'
 import Img from '../../../assets/loveletters/loveletters.png'
 import icon from '../../../assets/loveletters/lovelettersicon.png'
 import { useState } from 'react'
+import axios from 'axios';
 
 const LoveLetters = () => {
-    const [letter, setLetter] = useState([{},{}])
+    const [letter, setLetter] = useState([])
+
+    useEffect(() => {
+
+
+        const getloveletters = async () => {
+        try { const data = await axios.get('http://localhost:4700/loveletters/get')
+
+
+            // console.log(data.data);
+            setLetter(data.data);
+         }
+         catch (error) { console.log('There was an error getting the love letters!', error); }
+        }
+         getloveletters();
+
+
+    }, [])
+
+    console.log(letter);
+
+
     return (
         <div className='LoveLetters'>
 
